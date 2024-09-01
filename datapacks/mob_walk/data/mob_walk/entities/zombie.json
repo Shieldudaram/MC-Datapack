@@ -1,0 +1,23 @@
+{
+  "minecraft:zombie": {
+    "minecraft:behavior": {
+      "minecraft:goals": [
+        {
+          "goal": "minecraft:melee_attack",
+          "priority": 1,
+          "target": {
+            "selector": "nearest",
+            "condition": {
+              "test": "has_tag",
+              "tag": "opposite_team"
+            }
+          }
+        },
+        {
+          "goal": "minecraft:move_towards_target",
+          "priority": 2
+        }
+      ]
+    }
+  }
+}
